@@ -337,6 +337,10 @@ a,
 
 @media screen and (max-width: 680px) {
 
+    * {
+        pointer-events: none;
+    }
+
     .header {
         z-index: 3;
         background-color: #fff;
