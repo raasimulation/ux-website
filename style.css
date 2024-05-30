@@ -382,6 +382,10 @@ a,
         padding-bottom: 6px;
     }
 
+    #background-video {
+        display: none;
+    }
+
     .projects {
         display: flex;
         flex-direction: column;
