@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasim Bayramov</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="inside">
+        <div class="header">
+            <ul class="left">
+                <a href="./index.html">
+                    <li id="index" class="active-tab">Rasim</li>
+                </a>
+                <!-- <a href=",/projects.html">
+                    <li>Projects</li>
+                </a> -->
+                <li id="aboutlink" onclick="scrollToElement('#about')">About</li>
+            </ul>
+            <ul class="right">
+                <a target="_blank" href="https://github.com/raasimulation">
+                    <li class="link" id="glink">Github</li>
+                </a>
+                <a target="_blank" href="https://read.cv/rasim">
+                    <li class="link" id="cvlink">CV</li>
+                </a>
+                <a href="https://jifu98xj3lm.typeform.com/to/ENqFL5ZD" target="_blank">
+                    <li id="connect">Connect<span class="tooltip">Let's talk!</span></li>
+                </a>
+            </ul>
+        </div>
+        <button class="nav-toggle" id="navToggle">Open directory</button>
+        <div class="main">
+            <div class="directory">
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Doktar Product-Brand Guidelines<span>2024</span>
+                </div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">IoTrack App<span>2023</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Doktar Website<span>2022-2023</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Doktar Multi-Service App<span>2024</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Refresh<span>2024</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Farmville<span>2023</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Arpa Design System<span>2023</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Tuoli<span>2023</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Pawia<span>2022</span></div>
+                <div class="dir-item" data-video="/ux/img/video5.mp4">Villio<span>2022</span></div>
+            </div>
+            <div class="projects">
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p1.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Product-Brand Guidelines <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p2.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">IoTrack App <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p3.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Website <span>2022-2023</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p4.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Multi-Service App <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p5.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Refresh <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p6.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Farmville <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p7.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Arpa Design System <span>2024</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p8.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Tuoli <span>2023</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p9.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Pawia <span>2022</span></div>
+                </div>
+                <div class="p-item" data-video="/ux/img/video5.mp4">
+                    <div class="p-img" style="background-image:url('/ux/img/p10.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Villio <span>2022</span></div>
+                </div>
+
+            </div>
+            <div class="p-anim">
+                <video id="background-video" width="100%" height="100%" autoplay muted loop></video>
+            </div>
+        </div>
+        <section id="banner"></section>
+        <div id="about">
+            <div class="about-item">
+                <span style="color: #a3a3a3;">Services</span>
+                <br><br>
+                Application design<br>
+                Interface design<br>
+                Experience design<br>
+                Interaction design<br>
+                Art direction<br>
+                Front-end development<br>
+                Product strategy<br>
+                Concept work<br>
+                User research<br>
+                Proto branding<br>
+            </div>
+            <div class="about-item">
+                <span style="color: #a3a3a3;">Selected clients</span>
+                <br><br>
+                Doktar<br>
+                Refresh<br>
+                VakıfBank<br>
+                ASOS<br>
+                Tarımİzmir<br>
+                Tat<br>
+                SynapLine<br>
+                Cargill<br>
+                Farmville<br>
+                Turkish Airlines<br>
+            </div>
+            <div class="about-item">
+                <span style="color: #a3a3a3;">Bio</span>
+                <br><br>
+                They find comfort in the discovery of the unknown. Inviting others to connect with it, their work uses
+                the human body as an interface for a link. A link that goes through bodies of nature, objects of use,
+                everyday experiences, technology and memory. The manifestation of these ideas find themselves in
+                websites, installations, print, videos, performances and sculptures.
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-l">
+                <div id="update">v1.0.0</div>
+                Last updated: May 2024
+            </div>
+            <div id="footer-r">
+                Say hi!<br><br>
+                <a class="link" style="color: #333;" href="mailto:rasimbayramovj@gmail.com">rasimbayramovj@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElement = document.getElementById('background-video');
+
+            const changeVideo = (videoSrc) => {
+                if (videoSrc) {
+                    videoElement.src = videoSrc;
+                    videoElement.load();
+                    videoElement.classList.add('fade-in');
+                    videoElement.play();
+                }
+            };
+
+            const resetVideo = () => {
+                videoElement.classList.remove('fade-in');
+                videoElement.pause();
+                videoElement.currentTime = 0;
+            };
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Adjust threshold to ensure video changes when element is half-visible
+            };
+
+            const observerCallback = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const videoSrc = entry.target.getAttribute('data-video');
+                        changeVideo(videoSrc);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            document.querySelectorAll('.p-item').forEach(item => {
+                observer.observe(item);
+            });
+
+            document.querySelectorAll('.dir-item, .p-item').forEach(item => {
+                item.addEventListener('mouseenter', event => {
+                    const videoSrc = item.getAttribute('data-video');
+                    changeVideo(videoSrc);
+                });
+                item.addEventListener('mouseleave', event => {
+                    resetVideo();
+                });
+            });
+
+            document.querySelectorAll('.dir-item').forEach(item => {
+                item.addEventListener('click', event => {
+                    const videoSrc = item.getAttribute('data-video');
+                    const targetItem = document.querySelector(`.p-item[data-video="${videoSrc}"]`);
+                    if (targetItem) {
+                        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                        setTimeout(() => changeVideo(videoSrc), 500); // Ensure video changes after scrolling
+                    }
+                });
+            });
+
+            const aboutLink = document.getElementById('aboutlink');
+            const aboutSection = document.getElementById('about');
+
+            const rasimLink = document.getElementById('index');
+
+            const setActiveTab = (element) => {
+                document.querySelectorAll('.left li').forEach(li => {
+                    li.classList.remove('active-tab');
+                });
+                element.classList.add('active-tab');
+            };
+
+            if (aboutLink && aboutSection) {
+                aboutLink.addEventListener('click', event => {
+                    event.preventDefault(); // Prevent default link behavior
+                    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setActiveTab(aboutLink);
+                });
+            }
+
+            if (rasimLink) {
+                rasimLink.addEventListener('click', event => {
+                    event.preventDefault(); // Prevent default link behavior
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setActiveTab(rasimLink);
+                });
+            }
+
+            const navToggle = document.getElementById('navToggle');
+            const directory = document.querySelector('.directory');
+            const mainContainer = document.querySelector('.main');
+
+            navToggle.addEventListener('click', () => {
+                if (directory.classList.contains('open')) {
+                    directory.classList.remove('open');
+                    mainContainer.style.paddingLeft = '0';
+                    navToggle.textContent = 'Open directory';
+                } else {
+                    directory.classList.add('open');
+                    mainContainer.style.paddingLeft = '20%';
+                    navToggle.textContent = 'Close directory';
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
