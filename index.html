@@ -15,6 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
 </head>
 
 <body>
@@ -33,7 +34,7 @@
                 <a target="_blank" href="https://github.com/raasimulation">
                     <li class="link" id="glink">Github</li>
                 </a>
-                <a target="_blank" href="https://read.cv/rasim">
+                <a target="_blank" href="https://rasim.read.cv/">
                     <li class="link" id="cvlink">CV</li>
                 </a>
                 <a href="https://jifu98xj3lm.typeform.com/to/ENqFL5ZD" target="_blank">
@@ -41,9 +42,23 @@
                 </a>
             </ul>
         </div>
-        <button class="nav-toggle" id="navToggle">Open directory</button>
         <div class="main">
-            <div class="directory">
+            <div id="recent">
+                <div id="left-recent">
+                    Recent works <i class="ph-bold ph-arrow-down-right"></i>
+                </div>
+                <div id="r-items">
+                        <div class="r-item">
+                            <img src="./img/p1.jpg" alt="Doktar Product-Brand Guidelines">
+                            <div class="details">New project name<span>2024</span></div>
+                        </div>
+                        <div class="r-item">
+                            <img src="./img/p1.jpg" alt="Doktar Product-Brand Guidelines">
+                            <div class="details">New project name<span>2024</span></div>
+                        </div>
+                </div>
+            </div>
+            <!-- <div class="directory">
                 <div class="dir-item" data-video="./img/video5.mp4">Doktar Product-Brand Guidelines<span>2024</span>
                 </div>
                 <div class="dir-item" data-video="./img/video5.mp4">IoTrack App<span>2023</span></div>
@@ -55,69 +70,61 @@
                 <div class="dir-item" data-video="./img/video5.mp4">Tuoli<span>2023</span></div>
                 <div class="dir-item" data-video="./img/video5.mp4">Pawia<span>2022</span></div>
                 <div class="dir-item" data-video="./img/video5.mp4">Villio<span>2022</span></div>
-            </div>
+            </div> -->
             <div class="projects">
-                <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p1.jpg'); background-size: cover;">
+                <a class="detail-link" href="detail.html">
+                    <div class="p-item" data-video="./img/video5.mp4">
+                        <img src="./img/p1.jpg" alt="Doktar Product-Brand Guidelines">
+                        <div class="details">Doktar Product-Brand Guidelines<span>2024</span></div>
                     </div>
-                    <div class="details">Doktar Product-Brand Guidelines <span>2024</span></div>
-                </div>
+                </a>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p2.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p2.jpg" alt="IoTrack App">
                     <div class="details">IoTrack App <span>2024</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p3.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p3.jpg" alt="Doktar Website">
                     <div class="details">Doktar Website <span>2022-2023</span></div>
                 </div>
-                <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p4.jpg'); background-size: cover;">
-                    </div>
+                <!-- <div class="p-item" data-video="./img/video5.mp4">
+                    <img src="./img/p4.jpg" alt="Doktar Multi-Service App">
                     <div class="details">Doktar Multi-Service App <span>2024</span></div>
-                </div>
+                </div> -->
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p5.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p5.jpg" alt="Refresh">
                     <div class="details">Refresh <span>2024</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p6.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p6.jpg" alt="Farmville">
                     <div class="details">Farmville <span>2024</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p7.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p7.jpg" alt="Arpa Design System">
                     <div class="details">Arpa Design System <span>2024</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p8.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p8.jpg" alt="Tuoli">
                     <div class="details">Tuoli <span>2023</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p9.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p9.jpg" alt="Pawia">
                     <div class="details">Pawia <span>2022</span></div>
                 </div>
                 <div class="p-item" data-video="./img/video5.mp4">
-                    <div class="p-img" style="background-image:url('./img/p10.jpg'); background-size: cover;">
-                    </div>
+                    <img src="./img/p10.jpg" alt="Villio">
                     <div class="details">Villio <span>2022</span></div>
                 </div>
-
-            </div>
-            <div class="p-anim">
-                <video id="background-video" width="100%" height="100%" autoplay muted loop></video>
             </div>
         </div>
-        <section id="banner"></section>
         <div id="about">
+            <section id="banner"></section>
             <div class="about-item">
-                <span style="color: #a3a3a3;">Services</span>
-                <br><br>
+                <span style="color: #a3a3a3;">Bio</span><br><br>
+                industrial design educated designer with all sorts of tricks under the sleeve, interested in ways of
+                representing tender connections and dangling keychains
+            </div>
+            <div class="about-item">
+                <span style="color: #a3a3a3;">Services</span><br><br>
                 Application design<br>
                 Interface design<br>
                 Experience design<br>
@@ -130,8 +137,7 @@
                 Proto branding<br>
             </div>
             <div class="about-item">
-                <span style="color: #a3a3a3;">Selected clients</span>
-                <br><br>
+                <span style="color: #a3a3a3;">Selected clients</span><br><br>
                 Doktar<br>
                 Refresh<br>
                 VakıfBank<br>
@@ -143,19 +149,12 @@
                 Farmville<br>
                 Turkish Airlines<br>
             </div>
-            <div class="about-item">
-                <span style="color: #a3a3a3;">Bio</span>
-                <br><br>
-                They find comfort in the discovery of the unknown. Inviting others to connect with it, their work uses
-                the human body as an interface for a link. A link that goes through bodies of nature, objects of use,
-                everyday experiences, technology and memory. The manifestation of these ideas find themselves in
-                websites, installations, print, videos, performances and sculptures.
-            </div>
         </div>
+
         <div id="footer">
             <div id="footer-l">
-                <div id="update">v1.0.0</div>
-                Last updated: May 2024
+                <div id="update">v1.0.2</div>
+                Last updated: June 2024
             </div>
             <div id="footer-r">
                 Say hi!<br><br>
@@ -164,111 +163,33 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const videoElement = document.getElementById('background-video');
+        const aboutLink = document.getElementById('aboutlink');
+        const aboutSection = document.getElementById('about');
 
-            const changeVideo = (videoSrc) => {
-                if (videoSrc) {
-                    videoElement.src = videoSrc;
-                    videoElement.load();
-                    videoElement.classList.add('fade-in');
-                    videoElement.play();
-                }
-            };
+        const rasimLink = document.getElementById('index');
 
-            const resetVideo = () => {
-                videoElement.classList.remove('fade-in');
-                videoElement.pause();
-                videoElement.currentTime = 0;
-            };
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5 // Adjust threshold to ensure video changes when element is half-visible
-            };
-
-            const observerCallback = (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const videoSrc = entry.target.getAttribute('data-video');
-                        changeVideo(videoSrc);
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-            document.querySelectorAll('.p-item').forEach(item => {
-                observer.observe(item);
+        const setActiveTab = (element) => {
+            document.querySelectorAll('.left li').forEach(li => {
+                li.classList.remove('active-tab');
             });
+            element.classList.add('active-tab');
+        };
 
-            document.querySelectorAll('.dir-item, .p-item').forEach(item => {
-                item.addEventListener('mouseenter', event => {
-                    const videoSrc = item.getAttribute('data-video');
-                    changeVideo(videoSrc);
-                });
-                item.addEventListener('mouseleave', event => {
-                    resetVideo();
-                });
+        if (aboutLink && aboutSection) {
+            aboutLink.addEventListener('click', event => {
+                event.preventDefault(); // Prevent default link behavior
+                aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                setActiveTab(aboutLink);
             });
+        }
 
-            document.querySelectorAll('.dir-item').forEach(item => {
-                item.addEventListener('click', event => {
-                    const videoSrc = item.getAttribute('data-video');
-                    const targetItem = document.querySelector(`.p-item[data-video="${videoSrc}"]`);
-                    if (targetItem) {
-                        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-                        setTimeout(() => changeVideo(videoSrc), 500); // Ensure video changes after scrolling
-                    }
-                });
+        if (rasimLink) {
+            rasimLink.addEventListener('click', event => {
+                event.preventDefault(); // Prevent default link behavior
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setActiveTab(rasimLink);
             });
-
-            const aboutLink = document.getElementById('aboutlink');
-            const aboutSection = document.getElementById('about');
-
-            const rasimLink = document.getElementById('index');
-
-            const setActiveTab = (element) => {
-                document.querySelectorAll('.left li').forEach(li => {
-                    li.classList.remove('active-tab');
-                });
-                element.classList.add('active-tab');
-            };
-
-            if (aboutLink && aboutSection) {
-                aboutLink.addEventListener('click', event => {
-                    event.preventDefault(); // Prevent default link behavior
-                    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    setActiveTab(aboutLink);
-                });
-            }
-
-            if (rasimLink) {
-                rasimLink.addEventListener('click', event => {
-                    event.preventDefault(); // Prevent default link behavior
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    setActiveTab(rasimLink);
-                });
-            }
-
-            const navToggle = document.getElementById('navToggle');
-            const directory = document.querySelector('.directory');
-            const mainContainer = document.querySelector('.main');
-
-            navToggle.addEventListener('click', () => {
-                if (directory.classList.contains('open')) {
-                    directory.classList.remove('open');
-                    mainContainer.style.paddingLeft = '0';
-                    navToggle.textContent = 'Open directory';
-                } else {
-                    directory.classList.add('open');
-                    mainContainer.style.paddingLeft = '20%';
-                    navToggle.textContent = 'Close directory';
-                }
-            });
-        });
-
+        }
     </script>
 </body>
 
