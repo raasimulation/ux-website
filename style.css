@@ -164,28 +164,26 @@ li:hover {
     flex-direction: row;
     font-size: 36px;
     gap: 16px;
-    margin-bottom: 48px;
-    width: fit-content;
+    margin-bottom: 64px;
     padding: 24px;
     background: rgb(255, 255, 255);
     background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(245, 248, 255, 1) 100%);
     border: 1px #dae4ff solid;
     border-radius: 8px;
-    height: 400px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #left-recent {
     width: 100%;
-    height: inherit;
 }
 
-#r-items{
+#r-items {
     display: flex;
     flex-direction: row;
     gap: 24px;
     width: 100%;
     justify-content: flex-end;
-    margin-bottom: 48px;
 }
 
 .r-item {
@@ -194,6 +192,7 @@ li:hover {
     flex-direction: column;
     gap: 12px;
     width: 50%;
+    height: auto;
     border: 1px transparent solid;
     break-inside: avoid;
     transition: all .4s cubic-bezier(.23, 1, .32, 1);
@@ -203,7 +202,6 @@ li:hover {
 .r-item video {
     object-fit: cover;
     width: 100%;
-    height: auto;
     z-index: 0;
     background-size: cover;
     border-radius: 8px;
@@ -211,11 +209,7 @@ li:hover {
 }
 
 .r-item:hover {
-    background-color: #fafafa;
-    border: 1px #e6e6e6 solid;
-    padding: 8px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 1px 0px rgba(148, 148, 148, 0.00), 0px 2px 1px 0px rgba(148, 148, 148, 0.01), 0px 1px 1px 0px rgba(148, 148, 148, 0.05), 0px 1px 1px 0px rgba(148, 148, 148, 0.09);
+    transform: rotate(-2.5deg);
 }
 
 .main {
@@ -400,8 +394,8 @@ a,
 }
 
 #banner {
-    background: rgb(39,93,231);
-    background: linear-gradient(300deg, rgba(39,93,231,1) 0%, rgba(0,47,167,1) 100%); 
+    background: rgb(39, 93, 231);
+    background: linear-gradient(300deg, rgba(39, 93, 231, 1) 0%, rgba(0, 47, 167, 1) 100%);
     width: 100%;
     border-radius: 8px;
 }
@@ -420,10 +414,6 @@ a,
 }
 
 @media screen and (max-width: 680px) {
-
-    * {
-        pointer-events: none;
-    }
 
     .header {
         z-index: 3;
@@ -477,15 +467,17 @@ a,
         height: fit-content;
     }
 
-    
-    #r-items{ 
+
+    #r-items {
         flex-direction: row;
         gap: 24px;
         justify-content: flex-start;
         margin-bottom: 0;
         overflow-x: scroll;
+        scroll-padding: 1rem;
+        scroll-snap-type: both mandatory;
     }
-    
+
     .r-item {
         flex-shrink: 0;
         font-size: 16px;
@@ -496,10 +488,6 @@ a,
         border: 1px transparent solid;
         scroll-snap-align: start;
     }
-    
-    #background-video {
-        display: none;
-    }
 
     .projects {
         column-count: 1;
@@ -507,7 +495,7 @@ a,
         gap: 16px;
         width: 100%;
         align-items: flex-start;
-        height: max-content;
+        height: min-content;
     }
 
     .p-item {
