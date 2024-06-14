@@ -489,6 +489,10 @@ a,
         scroll-snap-align: start;
     }
 
+    .r-item:hover {
+        transform:none;
+    }
+
     .projects {
         column-count: 1;
         column-gap: 16px;
