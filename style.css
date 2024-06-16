@@ -544,6 +544,11 @@ a,
         font-size: 48px;
         position: relative;
     }
+
+    #action button span {
+        opacity: 1;
+        visibility:visible;
+    }
         
     #bottom-banner {
         padding: 16px;
