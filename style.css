@@ -394,10 +394,91 @@ a,
 }
 
 #banner {
-    background: rgb(39, 93, 231);
-    background: linear-gradient(300deg, rgba(39, 93, 231, 1) 0%, rgba(0, 47, 167, 1) 100%);
+    display: flex;
+    background: hsl(206, 100%, 73%);
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+}
+
+#action {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    flex: 1 0 0;
+}
+
+#action button {
+    height: 100%;
+    font-family: Geist;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    justify-content: flex-end;
+    border: none;
+    background: #75C4FF;
+    position: relative;
+    border-right: 1.5px solid #91D0FF;
+    overflow: hidden;
+}
+
+#action button i {
+    position: absolute;
+    top: 12.5%;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 140px;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
+}
+
+#action button:hover {
+    background: #66bdff;
+    cursor: pointer;
+}
+
+#action button span {
+    transition: all 0.8s cubic-bezier(.23, 1, .32, 1);
+}
+
+#action button:hover i {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-7%);
+}
+
+#action button:hover span {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(56px);
+}
+
+#quiz-button {
+    color: #fff;
+    border-top-left-radius: 12px;
+}
+
+#c-button {
+    border-top-right-radius: 12px;
+    color: hsl(206, 100%, 88%);
+}
+
+#bottom-banner {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+    align-self: stretch;
+    border-top: 1.5px solid #91D0FF;
+    word-wrap: break-word
 }
 
 #about {
@@ -490,7 +571,7 @@ a,
     }
 
     .r-item:hover {
-        transform:none;
+        transform: none;
     }
 
     .projects {
@@ -518,18 +599,45 @@ a,
         background-position: right;
     }
 
-    #banner {
-        background-color: #f3f3f3;
-        height: 160px;
-        border-radius: 8px;
-        width: 100%;
-    }
-
     #about {
         display: flex;
         flex-direction: column;
         gap: 24px;
         margin: 24px 24px 72px 24px;
+    }
+
+    #banner {
+        background: hsl(206, 100%, 73%);
+        border-radius: 8px;
+    }
+    
+    #action {
+        align-items: flex-start;
+        align-self: stretch;
+        flex: 1 0 0;
+    }
+    
+    #action button {
+        height: fit-content;
+        font-family: Geist;
+        font-size: 20px;
+        gap: 8px;
+        padding: 24px 16px;
+    }
+    
+    #action button:active {
+        background: #66bdff;
+    }
+
+    #action button i {
+        opacity: 1;
+        visibility:visible;
+        font-size: 48px;
+        position: relative;
+    }
+        
+    #bottom-banner {
+        padding: 16px;
     }
 
     .about-item {
