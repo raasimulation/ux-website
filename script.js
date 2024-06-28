@@ -1,5 +1,5 @@
 const CHANNEL_SLUG = 'website-images-ux';
-const PROJECTS_CONTAINER = document.getElementById('projects');
+const PROJECTS_CONTAINER = document.getElementById('main');
 
 async function fetchChannelContents(channelSlug) {
     try {
@@ -46,31 +46,27 @@ async function updateImages() {
 // Update images on page load
 updateImages();
 
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButtons = document.querySelectorAll('.collapse-button');
 
-const aboutLink = document.getElementById('aboutlink');
-const aboutSection = document.getElementById('about');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const collapsibleContent = button.nextElementSibling;
+            const icon = button.querySelector('i');
 
-const rasimLink = document.getElementById('index');
-
-const setActiveTab = (element) => {
-    document.querySelectorAll('.left li').forEach(li => {
-        li.classList.remove('active-tab');
+            if (collapsibleContent.classList.contains('show')) {
+                collapsibleContent.classList.remove('show');
+                setTimeout(() => {
+                    collapsibleContent.style.display = 'none';
+                }, 500); // Match this duration to the transition time
+                icon.className = 'ph ph-caret-down';
+            } else {
+                collapsibleContent.style.display = 'block';
+                setTimeout(() => {
+                    collapsibleContent.classList.add('show');
+                }, 10); // Small delay to ensure display change takes effect
+                icon.className = 'ph ph-caret-up';
+            }
+        });
     });
-    element.classList.add('active-tab');
-};
-
-if (aboutLink && aboutSection) {
-    aboutLink.addEventListener('click', event => {
-        event.preventDefault();
-        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setActiveTab(aboutLink);
-    });
-}
-
-if (rasimLink) {
-    rasimLink.addEventListener('click', event => {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setActiveTab(rasimLink);
-    });
-}
+});
