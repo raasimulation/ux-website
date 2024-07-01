@@ -309,6 +309,7 @@ a,
     }
 
     #left-body {
+        display: none;
         z-index: 8;
     }
 
@@ -319,14 +320,25 @@ a,
     }
 
     a,
-    :visited,
-    :hover {
+    :visited {
         text-decoration: none;
         color: #0056d6;
     }
 
     #switch-button {
         position: inherit;
+    }
+
+    #mobile-text {
+        text-indent: -9999px;
+        line-height: 0;
+    }
+
+    #mobile-text:after {
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+        content: "Rasim Bayramov is a designer and artist interested in unfolding of objects, humans technologies and their invisible links through websites, interactions, print and more";
     }
 
     .p-item {
