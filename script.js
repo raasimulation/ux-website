@@ -70,3 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const city = "America/New_York"; // Richmond, VA timezone
+    const cityName = "Richmond";
+    const datetimeElement = document.getElementById("datetime");
+
+    if (datetimeElement) {
+        fetch(`http://worldtimeapi.org/api/timezone/${city}`)
+            .then(response => response.json())
+            .then(data => {
+                const dateTime = new Date(data.datetime);
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = dateTime.toLocaleDateString('en-US', options);
+                datetimeElement.textContent = `${cityName} /  ${formattedDate}`;
+            })
+            .catch(error => {
+                console.error("Error fetching time data:", error);
+                datetimeElement.textContent = "Error fetching time data.";
+            });
+    } else {
+        console.error("Element with ID 'datetime' not found.");
+    }
+});
+
