@@ -72,25 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const city = "America/New_York"; // Richmond, VA timezone
+    const city = "America/New_York";
     const cityName = "Richmond";
     const datetimeElement = document.getElementById("datetime");
 
-    if (datetimeElement) {
-        fetch(`http://worldtimeapi.org/api/timezone/${city}`)
-            .then(response => response.json())
-            .then(data => {
-                const dateTime = new Date(data.datetime);
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = dateTime.toLocaleDateString('en-US', options);
-                datetimeElement.textContent = `${cityName} /  ${formattedDate}`;
-            })
-            .catch(error => {
-                console.error("Error fetching time data:", error);
-                datetimeElement.textContent = "Error fetching time data.";
-            });
-    } else {
+    if (!datetimeElement) {
         console.error("Element with ID 'datetime' not found.");
+        return;
     }
+
+    fetch(`https://gateway.timeapi.world/timezone/${city}`)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            const dateTime = new Date(data.datetime);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            datetimeElement.textContent = `${cityName} /  ${dateTime.toLocaleDateString('en-US', options)}`;
+        })
+        .catch(error => {
+            console.error("Error fetching time data:", error);
+            const fallback = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            datetimeElement.textContent = `${cityName} /  ${fallback}`;
+        });
 });
 
